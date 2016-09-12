@@ -20,9 +20,5 @@ function findOutlier(integers){
       odd.push(integers[i]);
     }
   };
-  if (even.length === 1){
-    return even[0];
-  } else {
-    return odd[0];
-  };
+  return even.length==1 ? even[0] : odd[0];
 }
