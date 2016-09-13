@@ -20,3 +20,10 @@ function digital_root(n) {
     return digits[0];
   };
 }
+
+function digital_root2(n) {
+  // ...
+  if (n < 10) return n;
+  
+  return digital_root2(n.toString().split("").reduce(function(x,y){ return +x + +y; },0));
+}
